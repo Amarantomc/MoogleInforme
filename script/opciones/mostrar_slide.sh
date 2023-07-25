@@ -3,13 +3,13 @@ mostrar_slide(){
     cd ..
     cd ..
     cd 'Informe y Presentacion'
-    pdf="Presentacion Moogle.pdf"
+    pdf="Presentacion_Moogle.pdf"
     if [ -f "$pdf" ]; then
      if [ $# -gt 0 ] 
     then
-    $a 'Presentacion Moogle'.pdf
+    $a 'Presentacion_Moogle'.pdf
     else
-    start 'Presentacion Moogle'.pdf
+    start 'Presentacion_Moogle'.pdf
     fi
     
 else

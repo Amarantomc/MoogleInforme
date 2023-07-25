@@ -16,18 +16,19 @@ mostrar_menu() {
 ejecutar_opcion() {
     case $1 in
         1)
-            run
+            run 
             ;;
         2)
-            reporte
+            reporte ;
             ;;
         3)
-            presentacion
+            presentacion ;
             ;;
-        4) cd 'Opciones'; bash mostrar_reporte.sh; cd ..
+        4)   
+             cd 'opciones';bash mostrar_reporte.sh; cd ..
              ;;
             5)
-               cd 'Opciones'; bash mostrar_slide.sh; cd ..
+            cd 'opciones';bash mostrar_slide.sh; cd ..
                ;;
             6) 
             clean ; echo "Files were deleted" ;;
@@ -41,11 +42,15 @@ reporte(){
     cd ..
     cd 'Informe y Presentacion'
     pdflatex 'Informe-Daniel-Amaranto-Mares-Garcia-C121'.tex
+    cd ..
+    cd 'script'
 }
 presentacion(){
     cd ..
     cd 'Informe y Presentacion'
-    pdflatex 'Presentacion Moogle'.tex
+    pdflatex 'Presentacion_Moogle'.tex
+    cd ..
+    cd 'script'
 }
 
 clean(){
@@ -53,6 +58,8 @@ clean(){
     cd 'Informe y Presentacion'
     rm -f *.aux *.lot *.lof *.log *.toc *.dvi *.ps *.bbl *.out *.synctex.gz *.fls *.fdb_latexmk *.pdf
     rm -f *.nav *.snm *.vrb
+    cd ..
+    cd 'script'
 }
 run(){
     cd ..
